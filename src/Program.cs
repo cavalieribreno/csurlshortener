@@ -21,7 +21,7 @@ program.MapPost("/short", async (HttpContext context) =>
 
     return Results.Ok(ShortUrlCreated);
 });
-
+// get para pegar a url original e redirecionar
 program.MapGet("/{ShortUrl}", async (string ShortUrl) =>
 {
     string UrlOriginal = UrlRepository.GetOriginalUrl(ShortUrl);
